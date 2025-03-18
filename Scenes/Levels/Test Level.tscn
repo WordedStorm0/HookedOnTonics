@@ -13,3 +13,5 @@ position = Vector2(-23, -17)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_omj1r")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
