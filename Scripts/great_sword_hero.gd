@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 
-const SPEED = 100.0
+const SPEED = 10.0
 const JUMP_VELOCITY = -200.0
 
 
@@ -29,7 +29,6 @@ func _physics_process(delta: float) -> void:
 		#input
 		velocity = velocity.move_toward(Vector2.ZERO, SPEED * delta)
 		animated_sprite.play("Idle")
-	if Input.is_action_just_pressed("attack"):
-		$Sword.swing()
+
 	# Move and slide the character in 2D space
 	move_and_slide()
