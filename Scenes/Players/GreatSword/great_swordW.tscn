@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5wqvth84vsc1"]
+[gd_scene load_steps=3 format=3 uid="uid://c5wqvth84vsc1"]
 
 [ext_resource type="Texture2D" uid="uid://dux0041uveca" path="res://Sprites/Spritesheets/GreatSwordSprite.png" id="1_wpcvj"]
+[ext_resource type="Script" uid="uid://bae406rj2b550" path="res://Scenes/Players/GreatSword/great_sword.gd" id="2_5xfcs"]
 
 [node name="GreatSword" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="GreatSword" type="Sprite2D" parent="."]
 texture = ExtResource("1_wpcvj")
+script = ExtResource("2_5xfcs")
