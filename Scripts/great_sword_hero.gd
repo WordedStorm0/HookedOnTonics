@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var animation_player = $AnimationPlayer
 
 const SPEED = 10.0
 const JUMP_VELOCITY = -200.0
@@ -23,12 +24,19 @@ func _physics_process(delta: float) -> void:
 		#to left and right movement when you move diagonally 
 		input_vector = input_vector.normalized()
 		velocity = input_vector * SPEED
-		animated_sprite.play("Run")
+		animation_player.play('Walk')
+		
+		#flips the sprite when moving left
+		if input_vector.x != 0:
+			animated_sprite.flip_h = input_vector.x < 0
 	else:
 		#move_toward sets the character's movement to 0 when there is no player
 		#input
 		velocity = velocity.move_toward(Vector2.ZERO, SPEED * delta)
-		animated_sprite.play("Idle")
+		animation_player.play('Idle')
 
+		if Input.is_action_just_pressed("attack"):
+			animation_player.play('Attack')
+			
 	# Move and slide the character in 2D space
 	move_and_slide()

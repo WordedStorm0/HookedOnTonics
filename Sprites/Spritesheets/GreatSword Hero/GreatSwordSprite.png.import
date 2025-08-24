@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dux0041uveca"
-path="res://.godot/imported/GreatSwordSprite.png-ba999318d487e123657ae6355063b5f3.ctex"
+path="res://.godot/imported/GreatSwordSprite.png-15af4077f447100735cc85e83f300848.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Spritesheets/GreatSwordSprite.png"
-dest_files=["res://.godot/imported/GreatSwordSprite.png-ba999318d487e123657ae6355063b5f3.ctex"]
+source_file="res://Sprites/Spritesheets/GreatSword Hero/GreatSwordSprite.png"
+dest_files=["res://.godot/imported/GreatSwordSprite.png-15af4077f447100735cc85e83f300848.ctex"]
 
 [params]
 
