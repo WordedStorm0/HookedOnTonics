@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		#to left and right movement when you move diagonally 
 		input_vector = input_vector.normalized()
 		velocity = input_vector * SPEED
-		animated_sprite.play("run")
+		animated_sprite.play("Run")
 	else:
 		#move_toward sets the character's movement to 0 when there is no player
 		#input

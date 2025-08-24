@@ -1,43 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://efdgq2e5scfx"]
+[gd_scene load_steps=6 format=3 uid="uid://efdgq2e5scfx"]
 
 [ext_resource type="Script" uid="uid://db4n1fb31f6ui" path="res://Scripts/great_sword_hero.gd" id="1_mrs2d"]
 [ext_resource type="Texture2D" uid="uid://botmk1hwelywi" path="res://Sprites/Spritesheets/GreatSword Hero Spritesheet.png" id="1_r65a7"]
-[ext_resource type="Script" uid="uid://dcuavjcawl5od" path="res://Scenes/Players/GreatSword/weapon_rotate.gd" id="3_fdbss"]
-[ext_resource type="PackedScene" uid="uid://c5wqvth84vsc1" path="res://Scenes/Players/GreatSword/great_swordW.tscn" id="4_jign3"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mrs2d"]
-atlas = ExtResource("1_r65a7")
-region = Rect2(0, 27, 17, 27)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_76b5q"]
-atlas = ExtResource("1_r65a7")
-region = Rect2(0, 0, 18, 27)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lsg3s"]
-atlas = ExtResource("1_r65a7")
-region = Rect2(18, 0, 18, 27)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_k2ji7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mrs2d")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_76b5q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lsg3s")
-}],
-"loop": true,
-"name": &"run",
-"speed": 5.0
-}]
+[ext_resource type="Script" uid="uid://dcuavjcawl5od" path="res://Scripts/weapon_rotate.gd" id="3_fdbss"]
+[ext_resource type="Texture2D" uid="uid://dux0041uveca" path="res://Sprites/Spritesheets/GreatSwordSprite.png" id="4_fdbss"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r0mcj"]
 radius = 6.0
@@ -46,11 +12,8 @@ height = 22.0
 [node name="GreatSword Hero" type="CharacterBody2D"]
 script = ExtResource("1_mrs2d")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_k2ji7")
-animation = &"Idle"
-frame_progress = 0.449079
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r65a7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.36, 4)
@@ -67,4 +30,7 @@ rotation = 0.162316
 script = ExtResource("3_fdbss")
 hero = NodePath("..")
 
-[node name="GreatSword" parent="Weapon Rotate" instance=ExtResource("4_jign3")]
+[node name="Sprite2D" type="Sprite2D" parent="Weapon Rotate"]
+texture = ExtResource("4_fdbss")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
