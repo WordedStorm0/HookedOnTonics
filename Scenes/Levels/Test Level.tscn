@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://0ry3msy45d7q"]
+[gd_scene load_steps=5 format=3 uid="uid://0ry3msy45d7q"]
 
 [ext_resource type="PackedScene" uid="uid://efdgq2e5scfx" path="res://Scenes/Players/GreatSword/great_sword_hero.tscn" id="1_b625q"]
+[ext_resource type="PackedScene" uid="uid://b7mhmati5n6qh" path="res://Scenes/Levels/cellphone.tscn" id="2_lktdu"]
+[ext_resource type="Script" uid="uid://c8y4uv6cy1e26" path="res://Scenes/Levels/cellphone.gd" id="3_7u35h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_omj1r"]
 
@@ -15,3 +17,7 @@ position = Vector2(-23, -17)
 shape = SubResource("WorldBoundaryShape2D_omj1r")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="cellphone_enemy" parent="." instance=ExtResource("2_lktdu")]
+position = Vector2(20, -39)
+script = ExtResource("3_7u35h")

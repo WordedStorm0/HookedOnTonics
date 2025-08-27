@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7mhmati5n6qh"]
+
+[ext_resource type="Texture2D" uid="uid://3c1yhrf5bab" path="res://Sprites/Spritesheets/cellphone_sprite.png" id="1_5eiof"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t66g5"]
+size = Vector2(26, 22)
+
+[node name="cellphone_enemy" type="CharacterBody2D"]
+
+[node name="cellphone_body" type="Sprite2D" parent="."]
+texture = ExtResource("1_5eiof")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 3)
+shape = SubResource("RectangleShape2D_t66g5")
