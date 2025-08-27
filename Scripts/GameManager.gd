@@ -43,4 +43,3 @@ func switch_to_end_scene():
 	##Ragdollmanager.clear_all_ragdolls()
 	#if AmmoManager:
 		#AmmoManager.clear_all_ammo()
-#
