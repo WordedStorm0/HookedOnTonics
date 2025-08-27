@@ -3,6 +3,8 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var animation_player = $AnimationPlayer
 
+var is_attacking: bool = false
+
 const SPEED = 10.0
 const JUMP_VELOCITY = -200.0
 
@@ -17,26 +19,34 @@ func _physics_process(delta: float) -> void:
 		Input.get_axis("move left", "move right"),
 		Input.get_axis("move up", "move down")
 	)
-
-	# Normalize the input vector to ensure consistent speed in all directions
-	if input_vector.length() > 0:
-		#Normalized checks the vector length which keeps the speed consistent
-		#to left and right movement when you move diagonally 
-		input_vector = input_vector.normalized()
-		velocity = input_vector * SPEED
-		animation_player.play('Walk')
+	
+	#Get left click input for attacking changing the flag state of is_attacking to true to stop
+	#bugging tf out and letting the attack animation to play through
+	if Input.is_action_just_pressed("attack") and not is_attacking:
+		is_attacking = true
+		animation_player.play('Attack')
+	
+	if is_attacking and not animation_player.is_playing():
+		is_attacking = false
 		
-		#flips the sprite when moving left
-		if input_vector.x != 0:
-			animated_sprite.flip_h = input_vector.x < 0
-	else:
-		#move_toward sets the character's movement to 0 when there is no player
-		#input
-		velocity = velocity.move_toward(Vector2.ZERO, SPEED * delta)
-		animation_player.play('Idle')
 
-		if Input.is_action_just_pressed("attack"):
-			animation_player.play('Attack')
-			
+	if not is_attacking:
+	# Normalize the input vector to ensure consistent speed in all directions
+		if input_vector.length() > 0:
+			#Normalized checks the vector length which keeps the speed consistent
+			#to left and right movement when you move diagonally 
+			input_vector = input_vector.normalized()
+			velocity = input_vector * SPEED
+			animation_player.play('Walk')
+		
+		#flips the sprite when moving left of the x axis -1
+			if input_vector.x != 0:
+				animated_sprite.flip_h = input_vector.x < 0
+		else:
+			#move_toward sets the character's movement to 0 when there is no player
+			#input
+			velocity = velocity.move_toward(Vector2.ZERO, SPEED * delta)
+			animation_player.play('Idle')
+
 	# Move and slide the character in 2D space
 	move_and_slide()
