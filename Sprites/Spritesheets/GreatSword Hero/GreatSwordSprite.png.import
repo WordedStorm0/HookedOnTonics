@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h2dsyir7tk4i"
-path="res://.godot/imported/GreatSwordSprite-sheet.png-b3b3cfb53f91fb459533ae4c6a938339.ctex"
+uid="uid://dux0041uveca"
+path="res://.godot/imported/GreatSwordSprite.png-15af4077f447100735cc85e83f300848.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Spritesheets/GreatSwordSprite-sheet.png"
-dest_files=["res://.godot/imported/GreatSwordSprite-sheet.png-b3b3cfb53f91fb459533ae4c6a938339.ctex"]
+source_file="res://Sprites/Spritesheets/GreatSword Hero/GreatSwordSprite.png"
+dest_files=["res://.godot/imported/GreatSwordSprite.png-15af4077f447100735cc85e83f300848.ctex"]
 
 [params]
 

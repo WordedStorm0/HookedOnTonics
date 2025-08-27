@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://botmk1hwelywi"
-path="res://.godot/imported/GreatSword Hero Spritesheet.png-5955639d1938a3651700d4c3b18376b0.ctex"
+uid="uid://hjoxxe6s3fpw"
+path="res://.godot/imported/GreatSword Hero Attack last 3 frames.png-65414ec4894907d887b68e99c279e749.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Spritesheets/GreatSword Hero Spritesheet.png"
-dest_files=["res://.godot/imported/GreatSword Hero Spritesheet.png-5955639d1938a3651700d4c3b18376b0.ctex"]
+source_file="res://Sprites/Spritesheets/GreatSword Hero/GreatSword Hero Attack last 3 frames.png"
+dest_files=["res://.godot/imported/GreatSword Hero Attack last 3 frames.png-65414ec4894907d887b68e99c279e749.ctex"]
 
 [params]
 

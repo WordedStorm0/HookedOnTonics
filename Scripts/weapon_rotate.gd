@@ -1,7 +1,7 @@
 extends Marker2D
 
 @export var hero: CharacterBody2D  # Drag your character node here in the editor
-@export var radius: float = 15
+@export var radius: float = 20
 
 func _process(delta):
 	#This creates a variable to grab the position of the mouse on your screen

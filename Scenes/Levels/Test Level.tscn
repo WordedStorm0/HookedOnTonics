@@ -5,19 +5,20 @@
 [ext_resource type="Script" uid="uid://c8y4uv6cy1e26" path="res://Scenes/Levels/cellphone.gd" id="3_7u35h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_omj1r"]
+[ext_resource type="Texture2D" uid="uid://d12bh8s0io5jp" path="res://Sprites/dev_background.png" id="2_lktdu"]
 
 [node name="Test Level" type="Node2D"]
 
 [node name="GreatSword Hero" parent="." instance=ExtResource("1_b625q")]
 position = Vector2(-23, -17)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("WorldBoundaryShape2D_omj1r")
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 
 [node name="cellphone_enemy" parent="." instance=ExtResource("2_lktdu")]
 position = Vector2(20, -39)
 script = ExtResource("3_7u35h")
+[node name="DevBackground" type="Sprite2D" parent="."]
+modulate = Color(0.450648, 0.450648, 0.450648, 1)
+z_index = -4
+position = Vector2(-180, 44)
+texture = ExtResource("2_lktdu")
