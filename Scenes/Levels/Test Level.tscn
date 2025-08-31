@@ -26,9 +26,7 @@ position = Vector2(-23, -17)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 [node name="cellphone_enemy" parent="." instance=ExtResource("2_lktdu")]
 position = Vector2(20, -39)
 script = ExtResource("3_7u35h")
@@ -38,7 +36,7 @@ modulate = Color(0.450648, 0.450648, 0.450648, 1)
 z_index = -4
 position = Vector2(-180, 44)
 texture = ExtResource("2_lktdu")
-=======
+
 [node name="cellphone_enemy" parent="." instance=ExtResource("2_lktdu")]
 position = Vector2(20, -39)
 script = ExtResource("3_7u35h")
@@ -47,4 +45,4 @@ script = ExtResource("3_7u35h")
 z_index = -3
 position = Vector2(-237, -34)
 texture = ExtResource("4_p23by")
->>>>>>> great-sword-animation-fuck
+
