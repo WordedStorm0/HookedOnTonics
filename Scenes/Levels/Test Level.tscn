@@ -15,5 +15,3 @@ modulate = Color(0.450648, 0.450648, 0.450648, 1)
 z_index = -4
 position = Vector2(-180, 44)
 texture = ExtResource("2_lktdu")
-
-[node name="Test" type="Node2D" parent="."]
