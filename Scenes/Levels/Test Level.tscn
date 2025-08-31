@@ -1,12 +1,23 @@
 [gd_scene load_steps=5 format=3 uid="uid://0ry3msy45d7q"]
 
 [ext_resource type="PackedScene" uid="uid://efdgq2e5scfx" path="res://Scenes/Players/GreatSword/great_sword_hero.tscn" id="1_b625q"]
+
 [ext_resource type="PackedScene" uid="uid://b7mhmati5n6qh" path="res://Scenes/Levels/cellphone.tscn" id="2_lktdu"]
 [ext_resource type="Texture2D" uid="uid://d12bh8s0io5jp" path="res://Sprites/dev_background.png" id="2_lktdu"]
 [ext_resource type="Script" uid="uid://c8y4uv6cy1e26" path="res://Scenes/Levels/cellphone.gd" id="3_7u35h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_omj1r"]
 [ext_resource type="Texture2D" uid="uid://d12bh8s0io5jp" path="res://Sprites/dev_background.png" id="2_lktdu"]
+
+[ext_resource type="PackedScene" uid="uid://b7mhmati5n6qh" path="res://Scenes/Levels/cellphone.tscn" id="2_lktdu"]
+[ext_resource type="Texture2D" uid="uid://d12bh8s0io5jp" path="res://Sprites/dev_background.png" id="2_lktdu"]
+[ext_resource type="Script" uid="uid://c8y4uv6cy1e26" path="res://Scenes/Levels/cellphone.gd" id="3_7u35h"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_omj1r"]
+[ext_resource type="Texture2D" uid="uid://d12bh8s0io5jp" path="res://Sprites/dev_background.png" id="2_lktdu"]
+[ext_resource type="PackedScene" uid="uid://b7mhmati5n6qh" path="res://Scenes/Enemies/cellphone.tscn" id="2_lktdu"]
+[ext_resource type="Script" uid="uid://c8y4uv6cy1e26" path="res://Scripts/cellphone.gd" id="3_7u35h"]
+[ext_resource type="Texture2D" uid="uid://d12bh8s0io5jp" path="res://Sprites/dev_background.png" id="4_p23by"]
 
 [node name="Test Level" type="Node2D"]
 
@@ -15,6 +26,7 @@ position = Vector2(-23, -17)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 [node name="cellphone_enemy" parent="." instance=ExtResource("2_lktdu")]
@@ -26,3 +38,13 @@ modulate = Color(0.450648, 0.450648, 0.450648, 1)
 z_index = -4
 position = Vector2(-180, 44)
 texture = ExtResource("2_lktdu")
+=======
+[node name="cellphone_enemy" parent="." instance=ExtResource("2_lktdu")]
+position = Vector2(20, -39)
+script = ExtResource("3_7u35h")
+
+[node name="DevBackground" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(-237, -34)
+texture = ExtResource("4_p23by")
+>>>>>>> great-sword-animation-fuck
