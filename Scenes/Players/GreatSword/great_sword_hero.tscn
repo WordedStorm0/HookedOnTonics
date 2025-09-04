@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://efdgq2e5scfx"]
+[gd_scene load_steps=31 format=3 uid="uid://efdgq2e5scfx"]
 
 [ext_resource type="Script" uid="uid://db4n1fb31f6ui" path="res://Scripts/great_sword_hero.gd" id="1_mrs2d"]
 [ext_resource type="Texture2D" uid="uid://botmk1hwelywi" path="res://Sprites/Spritesheets/GreatSword Hero/GreatSword Hero Spritesheet.png" id="1_r65a7"]
@@ -256,6 +256,34 @@ _data = {
 &"Walk": SubResource("Animation_70dv4")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jign3"]
+animation = &"Walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_70dv4"]
+animation = &"Walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xugkl"]
+animation = &"Walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_41el5"]
+animation = &"Walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cgfp2"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_5k2m0"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_jign3")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_70dv4")
+blend_point_1/pos = Vector2(-1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_xugkl")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_41el5")
+blend_point_3/pos = Vector2(0, -0.9)
+blend_point_4/node = SubResource("AnimationNodeAnimation_cgfp2")
+blend_point_4/pos = Vector2(0, 0)
+blend_mode = 1
+
 [node name="GreatSword Hero" type="CharacterBody2D"]
 slide_on_ceiling = false
 floor_stop_on_slope = false
@@ -264,7 +292,6 @@ script = ExtResource("1_mrs2d")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5k2m0")
 animation = &"Attack"
-frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-10.455, 4)
@@ -288,3 +315,8 @@ texture = ExtResource("5_jign3")
 libraries = {
 &"": SubResource("AnimationLibrary_cshwg")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeBlendSpace2D_5k2m0")
+anim_player = NodePath("../AnimationPlayer")
+parameters/blend_position = Vector2(0, 0.0493274)
